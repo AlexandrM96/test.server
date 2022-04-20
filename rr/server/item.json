@@ -1,0 +1,163 @@
+
+[
+    {
+        "id": 1,
+        "name": "Ноутбук Lenovo",
+        "price": "18000",
+        "quantity": "30",
+        "rating": "2",
+        "img": "https://andpro.ru/upload/iblock/47d/994a4291_3a16_11eb_8116_001e67d1aaeb_994a4292_3a16_11eb_8116_001e67d1aaeb.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Nikon D7500",
+        "price": "25000",
+        "quantity": "5",
+        "rating": "4",
+        "img": "https://profzoom.ru/wa-data/public/shop/products/61/49/4961/images/3214/3214.400.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Apple iPad Pro",
+        "price": "35000",
+        "quantity": "80",
+        "rating": "5",
+        "img": "https://twigo.ru/center/iblock/b41/apple_ipad_pro_2021_11_wi_fi_2_tb_cerebristyy.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Samsung Galaxy S21",
+        "price": "20000",
+        "quantity": "100",
+        "rating": "5",
+        "img": "https://www.wiki.tn/59397-thickbox_default/samsung-galaxy-s21-ultra-noir.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Телевизор SUPRA",
+        "price": "19000",
+        "quantity": "1",
+        "rating": "1",
+        "img" : "https://tehnoteca.ru/img/1275/1274685/supra_stv_lc24lt0020f_1.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Apple iPhone 13",
+        "price": "180000",
+        "quantity": "5",
+        "rating": "5",
+        "img" : "https://apple11.ru/28778-large_default/smartfon-apple-iphone-12-pro-256gb-grafitovyj.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Samsung Galaxy F3",
+        "price": "250000",
+        "quantity": "15",
+        "rating": "5",
+        "img": "https://phukiengalaxy.vn/media/product/1631358785_1.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Apple AirPods",
+        "price": "15000",
+        "quantity": "200",
+        "rating": "4",
+        "img": "https://alexstore24.ru/upload/iblock/169/f58d531d_bdc9_11eb_b80c_005056021804.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Samsung Galaxy S22",
+        "price": "200000",
+        "quantity": "12",
+        "rating": "3",
+        "img": "https://dkstatics-public.digikala.com/digikala-products/cae60280b24e358bf49a5a210f4cf58cd3dd56c1_1647263990.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+        "id": 10,
+        "name": "Huawei D14",
+        "price": "80000",
+        "quantity": "40",
+        "rating": "5",
+        "img": "https://vsevdom.net/image/cache/catalog/products_images/tp2/1656906-800x800.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Apple mouse",
+        "price": "9000",
+        "quantity": "10",
+        "rating": "3",
+        "img": "https://avatars.mds.yandex.net/i?id=a03381e9fa6e6beded74cdf0e710eb1b-4437137-images-thumbs&n=13"
+    },
+    {
+        "id": 12,
+        "name": "iMac",
+        "price": "90000",
+        "quantity": "2",
+        "rating": "5",
+        "img": "https://storage-web.website.yandexcloud.net/pictures/product/popup/472077_0.jpg"
+    },
+    {
+        "id": 13,
+        "name": "JBL Flip 5",
+        "price": "7000",
+        "quantity": "60",
+        "rating": "4",
+        "img": "https://avatars.mds.yandex.net/i?id=755c1b6d29b2a14b70526f438bac74b9-5877102-images-thumbs&n=13"
+    },
+    {
+        "id": 14,
+        "name": "iPhone 12 mini",
+        "price": "70000",
+        "quantity": "50",
+        "rating": "3",
+        "img": "https://vipmobile.com.vn/watermark/product/800x800x1/upload/product/iphon12-64gb-4935.png"
+    },
+    {
+        "id": 15,
+        "name": "Macbook Air",
+        "price": "120000",
+        "quantity": "20",
+        "rating": "4",
+        "img": "https://mobilestore.ec/wp-content/uploads/2020/11/MacBook-Air-M1-Gold-Mobile-Store-Ecuador.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Beats Audio",
+        "price": "30000",
+        "quantity": "9",
+        "rating": "3",
+        "img": "https://img.alicdn.com/imgextra/i2/2200877014436/O1CN01Vlbb5z1idjV6QwWLP_!!2200877014436.jpg"
+    },
+    {
+        "id": 17,
+        "name": "PS5 Pro",
+        "price": "10000",
+        "quantity": "0",
+        "rating": "3",
+        "img": "https://f001.backblazeb2.com/file/thumbnails/df/e/800x/dfe8b40748b51296d2b0c5352d7f54ef.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Apple XDR",
+        "price": "400000",
+        "quantity": "0",
+        "rating": "2",
+        "img": "https://static.turbosquid.com/Preview/2019/06/20__06_36_36/apple_mac_pro_01.jpg4FB7B612-FCA1-43A9-829D-134B30AE4E11Default.jpg"
+    },
+    {
+        "id": 19,
+        "name": "JBL Charge 5",
+        "price": "10000",
+        "quantity": "9",
+        "rating": "2",
+        "img": "https://www.kodumasinad.ee/media/www-kodumasinad-ee/product/259220_4.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Apple Watch 7",
+        "price": "45200",
+        "quantity": "100",
+        "rating": "1",
+        "img": "https://avplaza.ru/upload/iblock/beb/bebd7c7c95d6c496d1601e03e835c90f.jpeg"
+    }
+]
