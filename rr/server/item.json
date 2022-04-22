@@ -90,6 +90,14 @@
     },
     {
         "id": 12,
+        "name": "Apple iPhone SE",
+        "price": "8000",
+        "quantity": "10",
+        "rating": "2",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/41B5ytE8nCL._AC_AA800_.jpg"
+    },
+    {
+        "id": 13,
         "name": "iMac",
         "price": "90000",
         "quantity": "2",
@@ -97,7 +105,7 @@
         "img": "https://storage-web.website.yandexcloud.net/pictures/product/popup/472077_0.jpg"
     },
     {
-        "id": 13,
+        "id": 14,
         "name": "JBL Flip 5",
         "price": "7000",
         "quantity": "60",
@@ -105,7 +113,7 @@
         "img": "https://avatars.mds.yandex.net/i?id=755c1b6d29b2a14b70526f438bac74b9-5877102-images-thumbs&n=13"
     },
     {
-        "id": 14,
+        "id": 15,
         "name": "iPhone 12 mini",
         "price": "70000",
         "quantity": "50",
@@ -113,7 +121,7 @@
         "img": "https://vipmobile.com.vn/watermark/product/800x800x1/upload/product/iphon12-64gb-4935.png"
     },
     {
-        "id": 15,
+        "id": 16,
         "name": "Macbook Air",
         "price": "120000",
         "quantity": "20",
@@ -121,7 +129,7 @@
         "img": "https://mobilestore.ec/wp-content/uploads/2020/11/MacBook-Air-M1-Gold-Mobile-Store-Ecuador.jpg"
     },
     {
-        "id": 16,
+        "id": 17,
         "name": "Beats Audio",
         "price": "30000",
         "quantity": "9",
@@ -129,7 +137,7 @@
         "img": "https://img.alicdn.com/imgextra/i2/2200877014436/O1CN01Vlbb5z1idjV6QwWLP_!!2200877014436.jpg"
     },
     {
-        "id": 17,
+        "id": 18,
         "name": "PS5 Pro",
         "price": "10000",
         "quantity": "0",
@@ -137,7 +145,7 @@
         "img": "https://f001.backblazeb2.com/file/thumbnails/df/e/800x/dfe8b40748b51296d2b0c5352d7f54ef.jpg"
     },
     {
-        "id": 18,
+        "id": 19,
         "name": "Apple XDR",
         "price": "400000",
         "quantity": "0",
@@ -145,7 +153,7 @@
         "img": "https://static.turbosquid.com/Preview/2019/06/20__06_36_36/apple_mac_pro_01.jpg4FB7B612-FCA1-43A9-829D-134B30AE4E11Default.jpg"
     },
     {
-        "id": 19,
+        "id": 20,
         "name": "JBL Charge 5",
         "price": "10000",
         "quantity": "9",
@@ -153,7 +161,7 @@
         "img": "https://www.kodumasinad.ee/media/www-kodumasinad-ee/product/259220_4.jpg"
     },
     {
-        "id": 20,
+        "id": 21,
         "name": "Apple Watch 7",
         "price": "45200",
         "quantity": "100",

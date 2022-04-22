@@ -115,14 +115,83 @@ app.listen(4000, function () {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const users = [];
 
+//!!!добавляет пользователя!!!
 app.post('/user', function (request, response) {
-    users.push(request.body);
-    response.json(request.body);
+    const users = [];
+    fs.readFile('./users.json', 'utf8', (err, data) => {
+        if (err) {
+            console.log('ошибка', err);
+        }
+
+        const usersArr = JSON.parse(data);
+        console.log('usersArr', usersArr)
+        const newIdTwo = usersArr.length + 1 //запись нового id новому пользователю
+        console.log(newIdTwo);
+        users.push(...usersArr);
+        const newUser = request.body;
+        for (let i = 0; i < usersArr.length; i++) {// проверка существует ли пользователь
+            if ((users[i].login === newUser.login) ||
+                (users[i].mail === newUser.mail) ||
+                (users[i].id === newUser.id)) {
+                console.log('пользователь существует');
+                response.sendStatus(404)
+                return
+            }
+        }
+        newUser.id = newIdTwo; //запись нового id новому пользователю
+        users.push(newUser);
+        fs.writeFile('./users.json', JSON.stringify(users), (err, data) => {
+            if (err)
+                console.error(err)
+        });
+        response.json(users);
+        console.log('записано', newUser);
+    });
 });
 
-app.get('/user', function (request, response) {
-    response.json(users);
-    response.send(users);
+//!!!Меняет данные пользователя!!!
+app.put("/user/:id", function (req, res) {
+    fs.readFile('./users.json', 'utf8', (err, data) => {
+        if (err) {
+            console.log('ошибка', err);
+        }
+        const usersArr = JSON.parse(data);
+        const idOfUser = parseInt(req.body.id);
+        console.log('idOfUser', idOfUser)
+        const userIdx = +usersArr.findIndex((user) => user.id === idOfUser);
+        console.log('userIdx', userIdx);
+        if (userIdx !== -1) {
+            const oldUser = usersArr[userIdx];
+            console.log('oldUser', oldUser)
+            console.log('qqqqq', req.body);
+            req.body.id = idOfUser;
+            usersArr[userIdx] = { ...oldUser, ...req.body };
+            fs.writeFile('./users.json', JSON.stringify(usersArr), (err, data) => {
+                if (err)
+                    console.error(err)
+            });
+            res.json(usersArr[userIdx]);
+        } else {
+            res.status(404).json();
+        }
+    });
+});
+
+
+//!!!Удаление пользователя!!!
+app.delete('/user/:id', function (req, res) {
+    fs.readFile('./users.json', 'utf8', (err, data) => {
+        if (err) {
+            console.log('ошибка', err);
+        }
+        const usersArr = JSON.parse(data);
+        const idOfUser = parseInt(req.params.id);
+        newUsers = usersArr.filter((user) => user.id !== idOfUser);
+        fs.writeFile('./users.json', JSON.stringify(newUsers), (err, data) => {
+            if (err)
+                console.error(err)
+        });
+        res.json(newUsers);
+    });
 });
