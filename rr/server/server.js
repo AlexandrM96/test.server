@@ -1,10 +1,133 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
-const e = require('express');
+const mongoose = require('mongoose');
 const app = express();
 
+const Users = require('./Models/user')
+
 app.use(cors());
+
+async function start() {
+    try {
+        const settingConnect = url;
+        await mongoose.connect(settingConnect, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+        })
+ 
+        app.listen(PORT, () => {
+            console.log('Server has been started port: ' + PORT)
+        })
+    } catch(e) {
+        console.log(e)
+    }
+}
+ 
+start()
+
+Users.create({
+    username: "Alex",
+    email: "exaple@exaple.com",
+    password: "1234" 
+});
+
+const mysql = require('mysql2');
+const { DB_CONNECTION } = require('./const');
+
+const connection = mysql.createConnection({
+    host: DB_CONNECTION.host,
+    port: DB_CONNECTION.port,
+    user: DB_CONNECTION.username,
+    password: DB_CONNECTION.password,
+    database: DB_CONNECTION.database
+})
+
+
+connection.connect((err) => {
+    if (!err) {
+        console.log('success');
+    } else {
+        console.log('err:', err);
+    }
+});
+
+app.get('/task', (req, res) => {
+    connection.query('SELECT * FROM task;',
+        (err, data) => {
+            if (err) return res.status(500);
+            res.json(data);
+        })
+});
+
+app.get('/task/:id', (req, res) => {
+    connection.query(`SELECT * FROM task WHERE id = ${req.params.id};`,
+        (err, data) => {
+            if (err) return res.status(500);
+            res.json(data);
+        })
+});
+
+app.get('/addTask', (req, res) => {
+    fs.readFile('./sqlTasks.json', 'utf8', (err, data) => {
+        if (!err) {
+            const tasksArr = JSON.parse(data);
+            tasksArr.map((task) => {
+                const { description, due, employee, finished } = task;
+                if (!employee || !description) return (console.error('ошибка'))
+                const finishedText = finished ? `'${finished}'` : null;
+                const dueText = due ? `'${due}'` : null;
+                connection.query(`
+                INSERT INTO task (Task_description, Due_date, Employee, Finished_date)
+                VALUES ('${description}', ${dueText}, '${employee}', ${finishedText});`,
+                    (err, data) => {
+                        if (err) return (console.log('errErr', err));
+                        // res.json(data);
+                    })
+            })
+        } else {
+            console.error('ошиииибкаааааа', err);
+        }
+    });
+});
+
+
+
+app.get('/updateTask', (req, res) => {
+    connection.query(`
+    UPDATE task
+    SET Employee = 'Johny'
+    WHERE Employee = 'John'; `, (err, data) => {
+        if (!err) {
+            console.log('изменил имя',data);
+        } else {
+            console.log(err);
+        }
+    });
+    connection.query(`
+      UPDATE task
+      SET Finished_date = '2033-09-30'
+      WHERE Finished_date IS NULL; `, (err, data) => {
+        if (!err) {
+            console.log('изменил дату ',data);
+        } else {
+            console.log(err);
+        }
+    });
+
+//     connection.query(`
+//     DELETE FROM task
+//     WHERE Due_date IS NULL `, (err, data) => {
+//     if (!err) {
+//         console.log('удалил',data);
+//     } else {
+//         console.log(err);
+//     }
+// });
+});
+
 
 const cards = [
     { "card": "0000 0000 0000 0000", "id": 1 },
